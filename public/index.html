@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator + Graphing</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        #calculator {
+            margin-bottom: 30px;
+        }
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Scientific Calculator</h1>
+
+    <div id="calculator">
+        <input id="calcInput" placeholder="Enter expression (e.g., sin(45), 3^2, log(10))">
+        <button onclick="calculate()">Calculate</button>
+        <p>Result: <span id="result"></span></p>
+    </div>
+
+    <h1>Graph Function</h1>
+    <div id="graphing">
+        <input id="graphInput" placeholder="Enter function f(x) = e.g., sin(x), x^2 + 2x">
+        <button onclick="plotGraph()">Plot</button>
+    </div>
+
+    <canvas id="graphCanvas" width="600" height="300"></canvas>
+
+    <script src="calculator.js"></script>
+    <script src="graph.js"></script>
+
+</body>
+</html>
